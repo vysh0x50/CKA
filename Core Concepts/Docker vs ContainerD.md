@@ -55,6 +55,7 @@
 - From v1.24
 
 <img src=../images/08.png width="700"/>
+
 - Summary
 
 <img src=../images/09.png width="700"/>
