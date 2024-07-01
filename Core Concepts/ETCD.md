@@ -1,0 +1,20 @@
+## ETCD
+- ETCD is a distributed reliable key-value store that is Simple, Secure and Fast
+- key-value structure is different from traditional tabular/RDBMS structure
+- key-value store contains individual data and updating it won't affect other ones
+- Using json, yaml etc to retrieve key-value data
+- To install ETCD
+    - Download binaries
+    - Extract
+    - Run ETCD service
+    - Defualt port 2379
+- ETCDCTL can interact with ETCD Server using 2 API versions - Version 2 and Version 3.  By default its set to use Version 2. Each version has different sets of commands.
+- To set the right version of API, set the environment variable ETCDCTL_API command export ETCDCTL_API=3
+- Apart from that, you must also specify path to certificate files so that ETCDCTL can authenticate to the ETCD API Server. The certificate files are available in the etcd-master at the following path.
+    - --cacert /etc/kubernetes/pki/etcd/ca.crt     
+    - --cert /etc/kubernetes/pki/etcd/server.crt     
+    - --key /etc/kubernetes/pki/etcd/server.key
+- ./etcdctl set key1 value1 (v2)- To set a key-value - ./etcdctl put key1 value1 (v3)
+- ./etcdctl get key1 - To retrieve key-value
+- ./etcdctl - To view more options
+- Every command you run using "kubectl get" is retrieving values from ETCD cluster
